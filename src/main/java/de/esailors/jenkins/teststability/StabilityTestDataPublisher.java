@@ -141,16 +141,16 @@ public class StabilityTestDataPublisher extends TestDataPublisher {
 			
 			// If there was previous history, simply adds current test result to the history.
 			// Otherwise, build up a test history from the current test result.
-			if (history != null ) {
+			if (history != null) {
+				int buildNumber = build.getNumber();
+				CommitResult historyCommitResult;
+				historyCommitResult = new CommitResult(result);
 				if (result.isPassed()) {
-					history.add(build.getNumber(), true, new CommitResult(
-							result));
+					history.add(buildNumber, true, historyCommitResult);
 				} else if (result.getFailCount() > 0) {
-					history.add(build.getNumber(), false, new CommitResult(
-							result));
+					history.add(buildNumber, false, historyCommitResult);
 				}
 				stabilityHistoryPerTest.put(result.getId(), history);
-
 			} else if (isFirstTestFailure(result, history)) {
 				debug("Found failed test " + result.getId(), listener);
 				int maxHistoryLength = getDescriptor().getMaxHistoryLength();

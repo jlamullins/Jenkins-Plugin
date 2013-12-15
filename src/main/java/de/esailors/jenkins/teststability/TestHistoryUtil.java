@@ -119,7 +119,7 @@ public class TestHistoryUtil {
 				currentResult, null, flakiness);
 		Map<Integer, TestHistoryData> history;
 		if (previousHistory != null) {
-			history = previousHistory.getFilteredTestHistory();
+			history = previousHistory.getAllTestHistory();
 		} else {
 			history = buildInitialHistory(currentResult);
 		}
