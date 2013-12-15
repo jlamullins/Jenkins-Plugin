@@ -1,1 +1,0 @@
-raw("<img src='${rootURL}${my.smallImagePath}'/><span>(" + my.description + ")</span>")
