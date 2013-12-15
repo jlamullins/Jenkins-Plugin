@@ -230,7 +230,11 @@ public class CircularStabilityHistory {
 	}
 
 	public boolean hasCommitResult() {
-		if(data[data.length-1].cr == null)
+		if (data == null)
+			return false;
+		if (data[data.length - 1] == null)
+			return false;
+		if (data[data.length - 1].cr == null)
 			return false;
 		else
 			return true;

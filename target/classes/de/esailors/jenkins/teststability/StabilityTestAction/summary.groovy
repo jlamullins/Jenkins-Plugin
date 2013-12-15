@@ -13,7 +13,6 @@ if(my.testHistory != null){ //The table shows up only on the case result page.
 	raw("<td class='pane-header'>Build Number</td>")
 	raw("<td class='pane-header'>Results</td>")
 	raw("<td class='pane-header'>Duration</td>")
-	raw("<td class='pane-header'>Commit Author</td>")
 	raw("<td class='pane-header'>Flakiness</td>")
 	raw("</tr>")
 
@@ -31,10 +30,7 @@ if(my.testHistory != null){ //The table shows up only on the case result page.
 				raw("<td class='pane' style='background-color:#FF0000'>Fail</td>")
 			
 			raw("<td class='pane'>"+value.testCase.getDuration()+"</td>")
-			if(value.commitResult != null)
-				raw("<td class='pane'>"+value.commitResult.author+"</td>")
-			else
-				raw("<td class='pane'>N/A.</td>")
+
 			raw("<td class='pane'>"+my.getFlakinessCellData(value.flakiness)+"</td>")
 			
 			raw("</tr>")	
