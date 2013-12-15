@@ -141,7 +141,7 @@ public class StabilityTestDataPublisher extends TestDataPublisher {
 			
 			// If there was previous history, simply adds current test result to the history.
 			// Otherwise, build up a test history from the current test result.
-			if (history != null && history.hasCommitResult()) {
+			if (history != null ) {
 				if (result.isPassed()) {
 					history.add(build.getNumber(), true, new CommitResult(
 							result));
@@ -167,6 +167,8 @@ public class StabilityTestDataPublisher extends TestDataPublisher {
 						maxHistoryLength);
 				buildUpInitialHistoryWithCommitHistory(ringBuffer, result,
 						maxHistoryLength - 1);
+				ringBuffer.add(build.getNumber(), true, new CommitResult(
+						result));
 				stabilityHistoryPerTest.put(result.getId(), ringBuffer);
 			}
 		}
