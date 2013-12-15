@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<result>
+  <suites>
+    <suite>
+      <file>/home/dongyanzhang/.jenkins/jobs/MP2/workspace/target/surefire-reports/TEST-edu.illinois.cs427.mp2.TestSuite.xml</file>
+      <name>edu.illinois.cs427.mp2.TestSuite</name>
+      <duration>15.007999</duration>
+      <cases>
+        <case>
+          <duration>5.007</duration>
+          <className>edu.illinois.cs427.mp2.BookTest</className>
+          <testName>sampleTestCase</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>5.0</duration>
+          <className>edu.illinois.cs427.mp2.LibraryTest</className>
+          <testName>testAddBook</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+        </case>
+        <case>
+          <duration>5.001</duration>
+          <className>edu.illinois.cs427.mp2.LibraryTest</className>
+          <testName>testAddBookNotThere</testName>
+          <skipped>false</skipped>
+          <failedSince>0</failedSince>
+          <errorStackTrace>testing</errorStackTrace>
+        </case>
+      </cases>
+    </suite>
+  </suites>
+  <duration>15.007999</duration>
+  <keepLongStdio>false</keepLongStdio>
+</result>
