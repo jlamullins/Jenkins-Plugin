@@ -27,7 +27,7 @@ public class CommitHistoryTest {
 
 		TestResult testResult = new TestResult();
 		testResult
-				.parse(getDataFile("TEST-edu.illinois.cs427.mp2.LibraryTest.xml"));
+				.parse(getDataFile("testResultXMLExample.xml"));
 		Collection<SuiteResult> suites = testResult.getSuites();
 		assertEquals("Wrong number of test suites", 1, suites.size());
 		int testCaseCount = 0;
